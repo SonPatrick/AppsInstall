@@ -31,6 +31,8 @@ $blue
     $green 12\033[0m ➜ $blue Deepin Desktop (Ubuntu 17.04 +) \033[0m |    $green 26\033[0m ➜ $blue Spotify \033[0m
     $green 13\033[0m ➜ $blue Kdenlive \033[0m                        |    $green 27\033[0m ➜ $blue Gimp \033[0m
     $green 14\033[0m ➜ $blue Bleachbit \033[0m                       |    $green 28\033[0m ➜ $blue WPS Office \033[0m
+    $green 29\033[0m ➜ $blue Snes9x \033[0m
+    
                     
                                $red   
                        00 ➜ Instalar no PC  |    0 ➜ Sair \033[0m 
@@ -220,6 +222,10 @@ case $opcao in
         echo '[Desktop Entry]\n Version=1.0\n Name=wpspresentation\n Exec=/opt/wpsoffice/wpp\n Icon=/opt/wpsoffice/resource/icons/hicolor/256x256/apps/wps-office-wppmain.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/wpspresentation.desktop &&
         echo '[Desktop Entry]\n Version=1.0\n Name=wpsspreadsheets\n Exec=/opt/wpsoffice/et\n Icon=/opt/wpsoffice/resource/icons/hicolor/256x256/apps/wps-office-etmain.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/wpsspreadsheets.desktop &&
         echo "$green WPS Office instalado com sucesso \033[0m";;
+    29)
+    	sudo add-apt-repository ppa:random-stuff/ppa &&
+	sudo apt-get update &&
+	sudo apt-get install snes9x;;
     0)
         echo "\033[0; Saindo... \033[0m"
         exit;;
